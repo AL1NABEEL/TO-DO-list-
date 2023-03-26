@@ -9,12 +9,15 @@ function addTodo() {
     task: todoInput.value,
     dueDate: dueDateInput.value,
   };
-
+  if (todoInput.value === '') {
+    alert("You must write something!");
+    todoInput.focus();
+  } else {
   todos.push(todo);
   displayTodos();
   todoInput.value = "";
   dueDateInput.value = "";
-}
+}};
 
 function deleteTodo(id) {
   todos = todos.filter((todo) => todo.id !== id);
@@ -95,7 +98,3 @@ function displayTodos2() {
       todoList.appendChild(li);
 });
 };
-
-
-
-
