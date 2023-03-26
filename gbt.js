@@ -95,3 +95,4 @@ function displayTodos2() {
       todoList.appendChild(li);
 });
 };
+
