@@ -51,6 +51,7 @@ function displayTodos() {
 
     const editBtn = document.createElement("button");
     editBtn.innerText = "Edit";
+    editBtn.classList.add('edit-button');
     editBtn.onclick = () => editTodo(todo.id);
 
     li.appendChild(deleteBtn);
