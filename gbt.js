@@ -14,7 +14,7 @@ function addTodo() {
     todoInput.focus();
   } else {
   todos.push(todo);
-  displayTodos();
+  displayTodos2();
   todoInput.value = "";
   dueDateInput.value = "";
 }};
@@ -33,34 +33,6 @@ function editTodo(id) {
   displayTodos2();
 }
 
-function displayTodos() {
-    if (todoInput.value === '') {
-        alert("You must write something!");
-        todoInput.focus();
-      } else {
-  const todoList = document.getElementById("todoList");
-  todoList.innerHTML = "";
-
-  todos.forEach((todo) => {
-    const li = document.createElement("li");
-    li.innerText = `${todo.task} - Due Date: ${todo.dueDate}`;
-
-    const deleteBtn = document.createElement("button");
-    deleteBtn.innerText = "Delete";
-    deleteBtn.onclick = () => deleteTodo(todo.id);
-
-    const editBtn = document.createElement("button");
-    editBtn.innerText = "Edit";
-    editBtn.classList.add('edit-button');
-    editBtn.onclick = () => editTodo(todo.id);
-
-    li.appendChild(deleteBtn);
-    li.appendChild(editBtn);
-    todoList.appendChild(li);
-
-    
-  });
-}};
 
 function myFunction() {
     var element = document.body;
@@ -93,9 +65,15 @@ function displayTodos2() {
       const editBtn = document.createElement("button");
       editBtn.innerText = "Edit";
       editBtn.onclick = () => editTodo(todo.id);
+      editBtn.classList.add('edit-button');
+
+      const checkBox = document.createElement("input");
+      checkBox.type='checkbox';
+      checkBox.classList.add('checkBox');
   
       li.appendChild(deleteBtn);
       li.appendChild(editBtn);
+      li.appendChild(checkBox);
       todoList.appendChild(li);
 });
 };
