@@ -84,10 +84,10 @@ li button:hover {
 }
 ul li.checked {
     background: #47af4b;
-    color: #fff;
+    color: #000000;
 }
 ul li:hover{
-    background-color: rgb(182, 181, 181);
+    background-color: rgb(188, 188, 188);
     transition: 0.1s;
 }
 .edit-button{
@@ -109,7 +109,7 @@ ul li:hover{
 	background-color: rgb(0, 0, 0);
 	color: white;
 }
-.checkBox{
-	height: 25px;
-	width: 25px;
-}
+/* .checkBox{
+	height: 30px;
+	width: 30px;
+} */

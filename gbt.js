@@ -67,13 +67,13 @@ function displayTodos2() {
       editBtn.onclick = () => editTodo(todo.id);
       editBtn.classList.add('edit-button');
 
-      const checkBox = document.createElement("input");
-      checkBox.type='checkbox';
-      checkBox.classList.add('checkBox');
+      // const checkBox = document.createElement("input");
+      // checkBox.type='checkbox';
+      // checkBox.classList.add('checkBox');
   
       li.appendChild(deleteBtn);
       li.appendChild(editBtn);
-      li.appendChild(checkBox);
+      // li.appendChild(checkBox);
       todoList.appendChild(li);
 });
 };
